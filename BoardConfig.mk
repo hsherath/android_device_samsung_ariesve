@@ -43,7 +43,7 @@ TARGET_NO_INITLOGO := true
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_ARCH_LOWMEM := true
-TARGET_CPU_VARIANT := scorpion
+TARGET_CPU_VARIANT := cortex-a8
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 
@@ -53,6 +53,7 @@ TARGET_GCC_VERSION_EXP := 4.8
 # Kernel
 BOARD_KERNEL_BASE := 0x00400000
 BOARD_KERNEL_PAGESIZE := 4096
+BOARD_KERNEL_CMDLINE := androidboot.selinux=disabled
 TARGET_KERNEL_SOURCE := kernel/samsung/msm7x30/
 TARGET_KERNEL_CONFIG := ariesve_defconfig
 
@@ -146,7 +147,7 @@ BOARD_USES_QCOM_AUDIO_VOIPMUTE := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 5242880
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 7864320
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 545259520
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 1447034880
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 5146411008#1447034880
 BOARD_CACHEIMAGE_PARTITION_SIZE := 104857600
 BOARD_FLASH_BLOCK_SIZE := 4096
 
@@ -194,31 +195,31 @@ TARGET_BOOTANIMATION_USE_RGB565 := true
 BOARD_SCREENRECORD_LANDSCAPE_ONLY := true
 
 # SELinux
-BOARD_SEPOLICY_DIRS += \
-    device/samsung/ariesve/sepolicy
+#BOARD_SEPOLICY_DIRS += \
+ #   device/samsung/ariesve/sepolicy
 
-BOARD_SEPOLICY_UNION += \
-    file_contexts \
-    property_contexts \
-    bridge.te \
-    camera.te \
-    device.te \
-    dhcp.te \
-    domain.te \
-    drmserver.te \
-    file.te \
-    geomagneticd.te \
-    healthd.te \
-    init.te \
-    mac_update.te \
-    mediaserver.te \
-    rild.te \
-    rmt.te \
-    surfaceflinger.te \
-    system.te \
-    tee.te \
-    ueventd.te \
-    wpa_supplicant.te
+#BOARD_SEPOLICY_UNION += \
+ #   file_contexts \
+ #   property_contexts \
+ #   bridge.te \
+ #   camera.te \
+ #   device.te \
+ #   dhcp.te \
+ #   domain.te \
+  #  drmserver.te \
+  #  file.te \
+  #  geomagneticd.te \
+  #  healthd.te \
+  #  init.te \
+  #  mac_update.te \
+   # mediaserver.te \
+    ##rild.te \
+    #rmt.te \
+    #surfaceflinger.te \
+    #system.te \
+    #tee.te \
+    #ueventd.te \
+    #wpa_supplicant.te
 
 # Hardware tunables
 BOARD_HARDWARE_CLASS := device/samsung/ariesve/cmhw/
