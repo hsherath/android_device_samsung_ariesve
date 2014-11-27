@@ -904,7 +904,7 @@ public class SamsungRIL extends RIL implements CommandsInterface {
     /**
      * {@inheritDoc}
      */
-    @Override
+   /* @Override
     public void setCurrentPreferredNetworkType() {
         if (RILJ_LOGD) riljLog("setCurrentPreferredNetworkType IGNORED");
         /* Google added this as a fix for crespo loosing network type after
@@ -912,7 +912,7 @@ public class SamsungRIL extends RIL implements CommandsInterface {
          * due to the way we handle network type change (disable data
          * then change then re-enable).
          */
-    }
+    }/*
 
     @Override
     public void setPreferredNetworkType(int networkType , Message response) {
@@ -994,7 +994,7 @@ public class SamsungRIL extends RIL implements CommandsInterface {
                 (ConnectivityManager)mContext.getSystemService(Context.CONNECTIVITY_SERVICE);
             //start listening for the connectivity change broadcast
             startListening();
-            cm.setMobileDataEnabled(false);
+            //cm.setMobileDataEnabled(false);
         }
 
         @Override
@@ -1007,7 +1007,7 @@ public class SamsungRIL extends RIL implements CommandsInterface {
 
                 Rlog.d(RILJ_LOG_TAG, "preferred NetworkType set upping Mobile Dataconnection");
 
-                cm.setMobileDataEnabled(true);
+                //cm.setMobileDataEnabled(true);
                 //everything done now call back that we have set the networktype
                 AsyncResult.forMessage(mNetworktypeResponse, null, null);
                 mNetworktypeResponse.sendToTarget();
