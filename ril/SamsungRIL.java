@@ -912,7 +912,7 @@ public class SamsungRIL extends RIL implements CommandsInterface {
          * due to the way we handle network type change (disable data
          * then change then re-enable).
          */
-    }/*
+    }
 
     @Override
     public void setPreferredNetworkType(int networkType , Message response) {
