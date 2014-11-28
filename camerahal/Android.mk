@@ -26,9 +26,9 @@ LOCAL_C_INCLUDES += frameworks/native/include
 LOCAL_C_INCLUDES += system/media/camera/include
 
 ifeq ($(TARGET_QCOM_DISPLAY_VARIANT),caf)
-LOCAL_C_INCLUDES += hardware/qcom/display-caf/libgralloc
+LOCAL_C_INCLUDES += hardware/qcom/display-caf/msm7x30/libgralloc
 else
-LOCAL_C_INCLUDES += hardware/qcom/display-legacy/libgralloc
+LOCAL_C_INCLUDES += hardware/qcom/display-legacy/msm7x30/libgralloc
 endif
 
 LOCAL_SHARED_LIBRARIES := liblog libutils libcutils libbinder
