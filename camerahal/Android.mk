@@ -23,6 +23,7 @@ LOCAL_SRC_FILES := cameraHAL.cpp \
 
 LOCAL_C_INCLUDES := frameworks/av/include
 LOCAL_C_INCLUDES += frameworks/native/include
+LOCAL_C_INCLUDES += system/media/camera/include
 
 ifeq ($(TARGET_QCOM_DISPLAY_VARIANT),caf)
 LOCAL_C_INCLUDES += hardware/qcom/display-caf/libgralloc
