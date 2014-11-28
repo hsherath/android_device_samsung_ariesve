@@ -165,7 +165,8 @@ PRODUCT_PACKAGES += \
 
 # Build properties
 ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.secure=0
+    ro.secure=0 \
+    ro.adb.secure=0
 
 # Enable for debugging
 PRODUCT_PROPERTY_OVERRIDES += \

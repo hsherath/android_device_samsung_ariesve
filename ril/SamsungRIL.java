@@ -912,7 +912,7 @@ public class SamsungRIL extends RIL implements CommandsInterface {
          * due to the way we handle network type change (disable data
          * then change then re-enable).
          */
-    }
+    //}
 
     @Override
     public void setPreferredNetworkType(int networkType , Message response) {
@@ -955,6 +955,7 @@ public class SamsungRIL extends RIL implements CommandsInterface {
             mCatProCmdBuffer = null;
         }
     }
+    
 
     /* private class that does the handling for the dataconnection
      * dataconnection is done async, so we send the request for disabling it,

@@ -53,7 +53,7 @@ TARGET_GCC_VERSION_EXP := 4.8
 # Kernel
 BOARD_KERNEL_BASE := 0x00400000
 BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_CMDLINE := androidboot.selinux=disabled
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 TARGET_KERNEL_SOURCE := kernel/samsung/msm7x30/
 TARGET_KERNEL_CONFIG := ariesve_defconfig
 
@@ -196,30 +196,30 @@ BOARD_SCREENRECORD_LANDSCAPE_ONLY := true
 
 # SELinux
 #BOARD_SEPOLICY_DIRS += \
- #   device/samsung/ariesve/sepolicy
+#   device/samsung/ariesve/sepolicy
 
 #BOARD_SEPOLICY_UNION += \
- #   file_contexts \
- #   property_contexts \
- #   bridge.te \
- #   camera.te \
- #   device.te \
- #   dhcp.te \
- #   domain.te \
-  #  drmserver.te \
-  #  file.te \
-  #  geomagneticd.te \
-  #  healthd.te \
-  #  init.te \
-  #  mac_update.te \
-   # mediaserver.te \
-    ##rild.te \
-    #rmt.te \
-    #surfaceflinger.te \
-    #system.te \
-    #tee.te \
-    #ueventd.te \
-    #wpa_supplicant.te
+#   file_contexts \
+#   property_contexts \
+#  bridge.te \
+#    camera.te \
+#    device.te \
+#    dhcp.te \
+#    domain.te \
+#    drmserver.te \
+#    file.te \
+#    geomagneticd.te \
+#    healthd.te \
+#    init.te \
+#    mac_update.te \
+#    mediaserver.te \
+#    rild.te \
+#    rmt.te \
+#    surfaceflinger.te \
+#    system.te \
+#    tee.te \
+#    ueventd.te \
+#    wpa_supplicant.te
 
 # Hardware tunables
 BOARD_HARDWARE_CLASS := device/samsung/ariesve/cmhw/
