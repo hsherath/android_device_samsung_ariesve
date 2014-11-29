@@ -111,7 +111,6 @@ PRODUCT_COPY_FILES += \
 
 # Build packages
 PRODUCT_PACKAGES += \
-    #camera.msm7x30 \
     copybit.msm7x30 \
     gralloc.msm7x30 \
     libgenlock \
@@ -125,7 +124,8 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.usb.default \
     libaudio-resampler \
-    libaudioparameter
+    libaudioparameter  \
+    #camera.msm7x30 
 
 PRODUCT_PACKAGES += \
     libmm-omxcore \
@@ -166,12 +166,14 @@ PRODUCT_PACKAGES += \
 # Build properties
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.secure=0 \
-    ro.adb.secure=0
+    ro.adb.secure=0\
+    persist.sys.usb.config=mtp,adb \
+    persist.service.adb.enable=1 
 
 # Enable for debugging
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.debuggable=1 \
-    persist.service.adb.enable=1
+   # persist.service.adb.enable=1
 
 # For applications to determine if they should turn off specific memory-intensive
 # features that work poorly on low-memory devices.
