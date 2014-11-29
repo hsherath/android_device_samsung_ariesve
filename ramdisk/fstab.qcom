@@ -14,6 +14,6 @@
 #/dev/block/mmcblk0p17                       /sdcard           vfat    defaults                                                                recoveryonly
 #/dev/block/mmcblk1p1                        /external_sd      vfat    defaults                                                                recoveryonly
 
-/devices/platform/msm_sdcc.2/mmc_host/mmc1  auto              auto    defaults                                                                voldmanaged=sdcard0:17,nonremovable,noemulatedsd
-/devices/platform/msm_sdcc.4/mmc_host/mmc2  auto              auto    defaults                                                                voldmanaged=sdcard1:auto
+/devices/platform/msm_sdcc.2/mmc_host/mmc1*  auto              auto    defaults                                                                voldmanaged=sdcard0:17,nonremovable,noemulatedsd
+/devices/platform/msm_sdcc.4/mmc_host/mmc2*  auto              auto    defaults                                                                voldmanaged=sdcard1:auto
 /devices/platform/msm_hsusb_host.0          auto              auto    defaults                                                                voldmanaged=usbdisk:auto
